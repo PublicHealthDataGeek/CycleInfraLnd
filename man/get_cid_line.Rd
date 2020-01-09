@@ -15,3 +15,6 @@ sf object
 \description{
 Get Cycling Infrastructure data on lines
 }
+\examples{
+get_cid_line(type = "advanced_stop_line)"
+}
