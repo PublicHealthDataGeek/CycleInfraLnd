@@ -16,5 +16,8 @@ sf object
 Get Cycling Infrastructure data on lines
 }
 \examples{
-# get_cid_lines(type = "advanced_stop_line")
+get_cid_lines(type = "advanced_stop_line")
+get_cid_lines(type = "crossing")
+get_cid_lines(type = "cycle_lane_track")
+get_cid_lines(type = "restricted_route")
 }

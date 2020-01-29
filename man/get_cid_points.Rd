@@ -16,5 +16,9 @@ sf object
 Get Cycling Infrastructure data on points
 }
 \examples{
-# get_cid_points(type = "signal")
+get_cid_points(type = "signal")
+get_cid_points(type = "cycle_parking")
+get_cid_points(type = "restricted_point")
+get_cid_points(type = "signage")
+get_cid_points(type = "traffic_calming")
 }
