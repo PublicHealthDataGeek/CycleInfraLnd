@@ -17,26 +17,28 @@ The [Database Schema](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/docu
 ## Installing and using the CycleInfraLnd R package
 Use the following code to:
 
-1) Install the devtools package if you do not already have that in your R installation
+#### 1) Install the devtools package if you do not already have that in your R installation
 
-  `install.packages("devtools")`
+```
+install.packages("devtools")
+library(devtools)
+```
 
-  `library(devtools)`
-
-2) Use devtools to download the CycleInfraLnd package from github
+#### 2)  Use devtools to download the CycleInfraLnd package from github
 
   `devtools::install_github("publichealthdatageek/CycleInfraLnd")`
 
-3) Use library to load the CycleInfraLnd package
+#### 3) Use library to load the CycleInfraLnd package
 
   `library(CycleInfraLnd)`
 
-4) Use the relevent function to download the type of data you want (lines or points) and the asset type
+#### 4) Use the relevent function to download the type of data you want (lines or points) and the asset type
 For example:
   
-  `get_cid_lines(type = "advanced_stop_line")`
-
-  `get_cid_points(type = "signal")`
+  ```
+  get_cid_lines(type = "advanced_stop_line")
+  get_cid_points(type = "signal")
+  ```
 
 The example list in the help file contains all variations of this code for each of the different asset types.
 
