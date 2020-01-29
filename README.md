@@ -17,11 +17,11 @@ These can be downloaded by using the relevent line or point command and the type
 `get_cid_points(type = "signal")`
 
 
-More information on the this database can be found [here](https://data.london.gov.uk/dataset/cycling-infrastructure-database).
+More information on the CID can be found [here](https://data.london.gov.uk/dataset/cycling-infrastructure-database) and in this [TFL blog](https://blog.tfl.gov.uk/2019/08/13/data-drop-cycling-infrastructure-database/) explains about the database.
 
-There is a [Database Schema](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/cid_database_schema.xlsx), [Asset Information Guide](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/asset_information_guide.pdf) and [README](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/CIDASSETS_README.docx) for the CID. 
+The [Database Schema](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/cid_database_schema.xlsx), [Asset Information Guide](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/asset_information_guide.pdf) and [README](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/CIDASSETS_README.docx) provide important and useful information about the content of the database and how it was collected. 
 
-This [TFL blog](https://blog.tfl.gov.uk/2019/08/13/data-drop-cycling-infrastructure-database/) explains about the database.
+
 
 
 
