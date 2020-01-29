@@ -26,11 +26,15 @@ library(devtools)
 
 #### 2)  Use devtools to install the CycleInfraLnd package from github
 
-  `devtools::install_github("publichealthdatageek/CycleInfraLnd")`
+ ```
+ devtools::install_github("publichealthdatageek/CycleInfraLnd")
+ ```
 
 #### 3) Use library to load the CycleInfraLnd package
 
-  `library(CycleInfraLnd)`
+ ```
+ library(CycleInfraLnd)
+ ```
 
 #### 4) Use the relevent function and asset type to download data you want (lines or points) 
 Examples:
