@@ -1,48 +1,64 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-CycleInfraLnd
-=============
 
-The goal of this CycleInfraLnd R package is to access and download data from the Transport for London Cycling Infrastructure Database into R as spatial data (Simple features).
+# CycleInfraLnd
 
-The Cycling Infrastructure Database contains the following assets that are either lines(l) or points(p):
+The goal of this CycleInfraLnd R package is to download data from the
+Transport for London Cycling Infrastructure Database and import it into
+R as spatial data (Simple features).
 
--   Advanced Stop Line (l)
+The Cycling Infrastructure Database contains the following assets that
+are either lines(l) or points(p):
 
--   Crossing (l)
+  - Advanced Stop Line (l)
 
--   Cycle lane/track (l)
+  - Crossing (l)
 
--   Restricted Route (l)
+  - Cycle lane/track (l)
 
--   Cycle Parking (p)
+  - Restricted Route (l)
 
--   Restricted Point (p)
+  - Cycle Parking (p)
 
--   Signage (p)
+  - Restricted Point (p)
 
--   Signal (p)
+  - Signage (p)
 
--   Traffic Calming (p)
+  - Signal (p)
 
-More information on the CID can be found [here](https://data.london.gov.uk/dataset/cycling-infrastructure-database) and in this [TFL blog](https://blog.tfl.gov.uk/2019/08/13/data-drop-cycling-infrastructure-database/).
+  - Traffic Calming (p)
 
-The [Database Schema](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/cid_database_schema.xlsx), [Asset Information Guide](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/asset_information_guide.pdf) and [README](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/CIDASSETS_README.docx) provide important and useful information about the content of the database and how it was collected.
+More information on the CID can be found
+[here](https://data.london.gov.uk/dataset/cycling-infrastructure-database)
+and in this [TFL
+blog](https://blog.tfl.gov.uk/2019/08/13/data-drop-cycling-infrastructure-database/).
 
-Installation
-------------
+The [Database
+Schema](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/cid_database_schema.xlsx),
+[Asset Information
+Guide](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/asset_information_guide.pdf)
+and
+[README](https://cycling.data.tfl.gov.uk/CyclingInfrastructure/documentation/CIDASSETS_README.docx)
+provide important and useful information about the content of the
+database and how it was collected.
 
-You can install the developed version of CycleInfraLnd from [Github](https://github.com/PublicHealthDataGeek/CycleInfraLnd) with:
+## Installation
+
+You can install the developed version of CycleInfraLnd from
+[Github](https://github.com/PublicHealthDataGeek/CycleInfraLnd) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("PublicHealthDataGeek/CycleInfraLnd")
 ```
 
-Examples
---------
+## Examples
 
-These examples show the two functions in this package that allow you to obtain either lines or points from the Cycling Infrastructure Database. The example list in the help file contains all variations of this code for each of the different asset types i.e. the different lines and points that are available in the Cycling Infrastructure Database.
+These examples show the two functions in this package that allow you to
+obtain either lines or points from the Cycling Infrastructure Database.
+The example list in the help file contains all variations of this code
+for each of the different asset types i.e. the different lines and
+points that are available in the Cycling Infrastructure Database.
 
 ``` r
 library(CycleInfraLnd)
