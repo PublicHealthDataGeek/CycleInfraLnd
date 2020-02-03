@@ -2,13 +2,16 @@ Package: CycleInfraLnd
 Type: Package
 Title: Accesses and download data from the Transport for London Cycling Infrastructure Database into R as spatial data (Simple features)
 Version: 0.1.0
-Author: Caroline Tait, Robin Lovelace
-Maintainer: <ugm4cjt@leeds.ac.uk>
+Authors@R: c(
+    person("Caroline", "Tait", email = "ugm4cjt@leeds.ac.uk", role = c("aut", "cre"),
+      comment = c(ORCID = "0000-0002-9488-xxx")),
+    person("Robin", "Lovelace", email = "rob00x@gmail.com", role = c("aut"),
+      comment = c(ORCID = "0000-0001-5679-6536"))
+  )
 Description: The two functions in this package allow you to obtain either lines or points from the Cycling Infrastructure Database.  
     There are 9 asset types within the Cycling Infrastructure Database that are either available as lines or points.  The example list 
     in the help file contains all variations of this code for each of the different asset types.  The README file contains more information 
     about the Cycling Infrastructure Database.  
-
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
