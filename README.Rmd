@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 # CycleInfraLnd
 
-The goal of this CycleInfraLnd R package is to access and download data from the Transport for London Cycling Infrastructure Database into R as spatial data (Simple features).
+The goal of this CycleInfraLnd R package is to download data from the Transport for London Cycling Infrastructure Database and import it into R as spatial data (Simple features).
 
 The Cycling Infrastructure Database contains the following assets that are either lines(l) or points(p): 
 
