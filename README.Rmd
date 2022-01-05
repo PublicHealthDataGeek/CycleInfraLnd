@@ -57,10 +57,24 @@ These examples show the two functions in this package that allow you to obtain e
 
 ```{r example}
 library(CycleInfraLnd)
+?get_cid_lines
+cid_asl = get_cid_lines(type = "advanced_stop_line")
+cid_cycle_lanes = get_cid_lines(type = "cycle_lane_track")
 
-get_cid_lines(type = "advanced_stop_line")
+cid_signal = get_cid_points(type = "signal")
+```
 
-get_cid_points(type = "signal")
+```{r}
+library(dplyr)
+london_boroughs = spData::lnd
+waltham = london_boroughs %>% 
+  filter(NAME == "Waltham Forest")
+cid_cycle_lanes_waltham = cid_cycle_lanes[waltham, , op = sf::st_within]
+library(tmap)
+tmap_mode("view")
+
+tm_shape(cid_cycle_lanes_waltham) +
+  tm_lines()
 ```
 
 

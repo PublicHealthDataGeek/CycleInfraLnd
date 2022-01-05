@@ -10,23 +10,23 @@ R as spatial data (Simple features).
 The Cycling Infrastructure Database contains the following assets that
 are either lines(l) or points(p):
 
-  - Advanced Stop Line (l)
+-   Advanced Stop Line (l)
 
-  - Crossing (l)
+-   Crossing (l)
 
-  - Cycle lane/track (l)
+-   Cycle lane/track (l)
 
-  - Restricted Route (l)
+-   Restricted Route (l)
 
-  - Cycle Parking (p)
+-   Cycle Parking (p)
 
-  - Restricted Point (p)
+-   Restricted Point (p)
 
-  - Signage (p)
+-   Signage (p)
 
-  - Signal (p)
+-   Signal (p)
 
-  - Traffic Calming (p)
+-   Traffic Calming (p)
 
 More information on the CID can be found
 [here](https://data.london.gov.uk/dataset/cycling-infrastructure-database)
@@ -62,51 +62,33 @@ points that are available in the Cycling Infrastructure Database.
 
 ``` r
 library(CycleInfraLnd)
+?get_cid_lines
+cid_asl = get_cid_lines(type = "advanced_stop_line")
+cid_cycle_lanes = get_cid_lines(type = "cycle_lane_track")
 
-get_cid_lines(type = "advanced_stop_line")
-#> Simple feature collection with 3775 features and 11 fields
-#> geometry type:  LINESTRING
-#> dimension:      XY
-#> bbox:           xmin: -0.4837958 ymin: 51.30687 xmax: 0.2300917 ymax: 51.6707
-#> epsg (SRID):    4326
-#> proj4string:    +proj=longlat +datum=WGS84 +no_defs
-#> # A tibble: 3,775 x 12
-#>    FEATURE_ID SVDATE     ASL_FDR ASL_FDRLFT ASL_FDCENT ASL_FDRIGH ASL_SHARED
-#>    <chr>      <date>     <chr>   <chr>      <chr>      <chr>      <chr>     
-#>  1 RWG276569  2018-03-07 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  2 RWG276570  2018-03-09 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  3 RWG276571  2018-03-09 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  4 RWG150409  2017-09-19 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  5 RWG150410  2017-09-20 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  6 RWG150415  2017-09-21 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  7 RWG150416  2017-09-21 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  8 RWG150424  2017-09-22 FALSE   FALSE      FALSE      FALSE      FALSE     
-#>  9 RWG150449  2017-09-27 FALSE   FALSE      FALSE      FALSE      FALSE     
-#> 10 RWG150329  2017-09-18 TRUE    TRUE       FALSE      FALSE      FALSE     
-#> # … with 3,765 more rows, and 5 more variables: ASL_COLOUR <chr>,
-#> #   BOROUGH <chr>, PHOTO1_URL <chr>, PHOTO2_URL <chr>, geometry <LINESTRING
-#> #   [°]>
-
-get_cid_points(type = "signal")
-#> Simple feature collection with 443 features and 10 fields
-#> geometry type:  POINT
-#> dimension:      XY
-#> bbox:           xmin: -0.417572 ymin: 51.37778 xmax: 0.1080144 ymax: 51.62969
-#> epsg (SRID):    4326
-#> proj4string:    +proj=longlat +datum=WGS84 +no_defs
-#> # A tibble: 443 x 11
-#>    FEATURE_ID SVDATE     SIG_HEAD SIG_SEPARA SIG_EARLY SIG_TWOSTG SIG_GATE
-#>    <chr>      <date>     <chr>    <chr>      <chr>     <chr>      <chr>   
-#>  1 RWG039736  2017-08-24 TRUE     FALSE      FALSE     FALSE      FALSE   
-#>  2 RWG039729  2017-07-06 TRUE     FALSE      FALSE     FALSE      FALSE   
-#>  3 RWG108125  2017-06-21 TRUE     FALSE      TRUE      FALSE      FALSE   
-#>  4 RWG001914  2017-05-31 TRUE     TRUE       FALSE     FALSE      FALSE   
-#>  5 RWG001915  2017-05-31 TRUE     TRUE       FALSE     FALSE      FALSE   
-#>  6 RWG039732  2017-08-23 TRUE     FALSE      TRUE      FALSE      FALSE   
-#>  7 RWG001919  2017-05-06 TRUE     TRUE       FALSE     FALSE      FALSE   
-#>  8 RWG039728  2017-05-31 TRUE     TRUE       FALSE     FALSE      FALSE   
-#>  9 RWG039730  2017-07-06 TRUE     FALSE      FALSE     FALSE      FALSE   
-#> 10 RWG039731  2017-07-18 TRUE     TRUE       FALSE     FALSE      FALSE   
-#> # … with 433 more rows, and 4 more variables: BOROUGH <chr>, PHOTO1_URL <chr>,
-#> #   PHOTO2_URL <chr>, geometry <POINT [°]>
+cid_signal = get_cid_points(type = "signal")
 ```
+
+``` r
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+london_boroughs = spData::lnd
+waltham = london_boroughs %>% 
+  filter(NAME == "Waltham Forest")
+cid_cycle_lanes_waltham = cid_cycle_lanes[waltham, , op = sf::st_within]
+library(tmap)
+tmap_mode("view")
+#> tmap mode set to interactive viewing
+
+tm_shape(cid_cycle_lanes_waltham) +
+  tm_lines()
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
