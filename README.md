@@ -62,7 +62,7 @@ points that are available in the Cycling Infrastructure Database.
 
 ``` r
 library(CycleInfraLnd)
-?get_cid_lines
+?get_cid_lines # help for this function
 cid_asl = get_cid_lines(type = "advanced_stop_line")
 cid_cycle_lanes = get_cid_lines(type = "cycle_lane_track")
 
@@ -71,13 +71,13 @@ cid_signal = get_cid_points(type = "signal")
 
 ``` r
 library(dplyr)
-london_boroughs = spData::lnd
+london_boroughs = spData::lnd # get spatial data for London
 waltham = london_boroughs %>% 
-  filter(NAME == "Waltham Forest")
-cid_cycle_lanes_waltham = cid_cycle_lanes[waltham, , op = sf::st_within]
+  filter(NAME == "Waltham Forest") # get spatial data for Waltham Forest
+cid_cycle_lanes_waltham = cid_cycle_lanes[waltham, , op = sf::st_within] # Spatially subset cycle lanes to identify those in Waltham Forest
 library(tmap)
 tm_shape(cid_cycle_lanes_waltham) +
   tm_lines()
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="50%" />
