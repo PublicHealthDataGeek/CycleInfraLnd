@@ -71,22 +71,11 @@ cid_signal = get_cid_points(type = "signal")
 
 ``` r
 library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 london_boroughs = spData::lnd
 waltham = london_boroughs %>% 
   filter(NAME == "Waltham Forest")
 cid_cycle_lanes_waltham = cid_cycle_lanes[waltham, , op = sf::st_within]
 library(tmap)
-tmap_mode("view")
-#> tmap mode set to interactive viewing
-
 tm_shape(cid_cycle_lanes_waltham) +
   tm_lines()
 ```
