@@ -48,7 +48,7 @@ You can install the developed version of CycleInfraLnd from
 [Github](https://github.com/PublicHealthDataGeek/CycleInfraLnd) with:
 
 ``` r
-# install.packages("devtools")
+#install.packages("devtools")
 devtools::install_github("PublicHealthDataGeek/CycleInfraLnd")
 ```
 
@@ -92,3 +92,13 @@ tm_shape(cid_cycle_lanes_waltham) +
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+## Publications
+
+The CycleInfraLnd package has been used in the following academic
+papers:
+
+-   Tait C, Beecham R, Lovelace R, Barber S. 2022. Is cycling
+    infrastructure in London safe and equitable? Evidence from the
+    cycling infrastructure database. Journal of Transport and Health.
+    <https://doi.org/10.1016/j.jth.2022.101369>
