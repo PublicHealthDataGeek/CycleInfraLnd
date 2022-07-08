@@ -103,5 +103,5 @@ papers:
 
 -   Beecham, R., Tait, C., Lovelace, R. and Yang, Y. 2022. Connected
     bikeability in London: which localities are better connected by bike
-    and does this matter?. Available from: osf.io/gbfz8 Code available
-    at: <https://github.com/rogerbeecham/connected-bikeability-london>
+    and does this matter?. <https://osf.io/gbfz8/> Code available at:
+    <https://github.com/rogerbeecham/connected-bikeability-london>
