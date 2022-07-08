@@ -100,3 +100,8 @@ papers:
     infrastructure in London safe and equitable? Evidence from the
     cycling infrastructure database. Journal of Transport and Health.
     <https://doi.org/10.1016/j.jth.2022.101369>
+
+-   Beecham, R., Tait, C., Lovelace, R. and Yang, Y. 2022. Connected
+    bikeability in London: which localities are better connected by bike
+    and does this matter?. Available from: osf.io/gbfz8 Code available
+    at: <https://github.com/rogerbeecham/connected-bikeability-london>
