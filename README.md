@@ -1,6 +1,4 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # CycleInfraLnd
 
 The goal of this CycleInfraLnd R package is to download data from the
